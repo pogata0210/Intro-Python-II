@@ -1,5 +1,6 @@
 from room import Room
 from player import Player
+from items import Items
 
 # Declare all the rooms
 
@@ -24,8 +25,15 @@ chamber! Sadly, it has already been completely emptied by
 earlier adventurers. The only exit is to the south."""),
 }
 
+item = {
+        "legendary": Items("Dragon Balls", """make a wish""")
+               
+        }
+
 
 # Link rooms together
+
+
 
 room['outside'].n_to = room['foyer']
 room['foyer'].s_to = room['outside']
@@ -75,6 +83,10 @@ while True:
     elif cmd == "q":
         
         print("goodbye")
+        
+    elif cmd == "p":
+        
+        print("picked up Dragon Balls") 
         
         break
     else: print("I did not recognized that commend")
