@@ -1,17 +1,4 @@
-class Room:
-    def __init__(self, title, description):
-        self.title = title
-        self.description = description
-        self.n_to = None
-        self.s_to= None
-        self.e_to = None
-        self.w_to = None
-#temp file for testing         
-class Plyer:
-     def __init__(self, name, starting_room):
-         self.name = name
-         self.current_room = starting_room
-         
+
          
 room = {
         'outside':  Room("outside Cave Entrace",

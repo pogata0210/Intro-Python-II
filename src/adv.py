@@ -1,7 +1,10 @@
 from room import Room
+from player import Player
 
 # Declare all the rooms
 
+         
+         
 room = {
     'outside':  Room("Outside Cave Entrance",
                      "North of you, the cave mount beckons"),
@@ -32,6 +35,50 @@ room['overlook'].s_to = room['foyer']
 room['narrow'].w_to = room['foyer']
 room['narrow'].n_to = room['treasure']
 room['treasure'].s_to = room['narrow']
+
+player = Player ("Pablo", room['outside'])
+
+while True:
+    #pritn the current room title and description
+    
+    current_room = player.current_room
+    print(player.current_room.title)
+    print(player.current_room.decription)
+    #wait for user input
+    cmd = input("-> ")
+    #Parse user inputs (n, s ,w, e,q)
+    
+    if cmd == "n":
+        if current_room.n_to is not None:
+            player.current_room = current_room.n_to
+        else:
+            print("You cannot go that way")
+            
+            elif: cmd == "s":
+        if current_room.s_to is not None:
+            player.current_room = current_room.s_to
+        else:
+            print("You cannot go that way")
+            
+             elif: cmd == "e":
+        if current_room.e_to is not None:
+            player.current_room = current_room.e_to
+        else:
+            print("You cannot go that way")
+            
+             elif: cmd == "w":
+        if current_room.w_to is not None:
+            player.current_room = current_room.w_to
+        else:
+            print("You cannot go that way")
+        
+    elif: cmd == "q":
+        
+        print("goodbye")
+        
+        break
+    else: print("I did not recognized that commend")
+
 
 #
 # Main
