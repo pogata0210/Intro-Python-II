@@ -43,7 +43,7 @@ while True:
     
     current_room = player.current_room
     print(player.current_room.title)
-    print(player.current_room.decription)
+    print(player.current_room.description)
     #wait for user input
     cmd = input("-> ")
     #Parse user inputs (n, s ,w, e,q)
@@ -54,25 +54,25 @@ while True:
         else:
             print("You cannot go that way")
             
-            elif: cmd == "s":
+    elif cmd == "s":
         if current_room.s_to is not None:
             player.current_room = current_room.s_to
         else:
             print("You cannot go that way")
             
-             elif: cmd == "e":
+    elif cmd == "e":
         if current_room.e_to is not None:
             player.current_room = current_room.e_to
         else:
             print("You cannot go that way")
             
-             elif: cmd == "w":
+    elif cmd == "w":
         if current_room.w_to is not None:
             player.current_room = current_room.w_to
         else:
             print("You cannot go that way")
         
-    elif: cmd == "q":
+    elif cmd == "q":
         
         print("goodbye")
         
